@@ -30,6 +30,7 @@ nav{
    margin-left: auto;
   margin-right: auto;
     width: 100vw;
+    height: 100vw;
 }
 .logo{
     width: 6vw;
@@ -46,12 +47,53 @@ nav{
 #burger{
     grid-area: burger;   
 }
-.burger-icon{
-    text-align:right;
-}
 main{
     /*background: #762210;*/
     grid-area: main;
+}
+.caroussel{
+    overflow:hidden;
+    position: relative;
+    max-width: 100vw;
+}
+
+.caroussel .caroussel-item,
+.caroussel .caroussel-item--hidden {
+    display: none;
+}
+.caroussel .caroussel-item img{
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.caroussel .caroussel-item--visible{
+    display: block;
+}
+.caroussel .caroussel-actions{
+    display:flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.caroussel .caroussel-actions button {
+    border-radius: 50px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.caroussel .caroussel-actions button#carousel_button--prev {
+    margin-left: 20px;
+}
+
+.caroussel .caroussel-actions button#carousel_button--next {
+    margin-right: 20px;
 }
 
 #t1{
