@@ -1,0 +1,136 @@
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /*grid-template-rows: 0.2fr 6fr 4fr 10fr 1fr 2fr 0.5fr 1fr 1.3fr ;*/
+    grid-template-rows: 50px 600px 350px 50px 350px 400px 20px 350px 150px ;
+    grid-template-rows: 3vw 50vw 50vw 3vw 40vw 50vw 3vw 40vw 10vw ;
+    grid-template-areas: 
+        "nav nav nav nav nav nav nav nav nav nav nav nav"
+        "main main main main main main main main main main main main"
+        ". . t1 t1 t1 t1  pic1 pic1 pic1 pic1 . ."
+        "t2 t2 t2 t2 t2 t2 t2 t2 t2 t2 t2 t2"
+        "c1 c1 c1 c2 c2 c2 c3 c3 c3 c4 c4 c4"
+        ". pic2 pic2 pic2 pic2 pic2 pic2 pic2 pic2 pic2 pic2 ."
+        "t3 t3 t3 t3 t3 t3 t3 t3 t3 t3 t3 t3"
+        ". c5 c5 c5 . c6 c6 . c7 c7 c7 ."
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-gap: 1rem;
+}
+
+nav{
+   background: #ff5733;
+   grid-area: nav;
+}
+
+main{
+    background: #762210;
+    grid-area: main;
+}
+
+#t1{
+    background: #32231f;
+    grid-area: t1;
+}
+
+#t2{
+    background: #f0cf2a;
+    grid-area: t2;
+}
+
+#t3{
+    background: #9c8820;
+    grid-area: t3;
+}
+
+#pic1{
+    background: #659512;
+    grid-area: pic1;
+}
+
+#pic2{
+    background: #129518;
+    grid-area: pic2;
+}
+
+#c1{
+    background: #129548;
+    grid-area: c1;
+}
+
+#c2{
+    background: #1affd2;
+    grid-area: c2;
+}
+
+#c3{
+    background: #19b899;
+    grid-area: c3;
+}
+
+#c4{
+    background: #19b6b8; 
+    grid-area: c4;
+}
+
+#c5{
+    background: #1983b8; 
+    grid-area: c5;
+}
+
+#c6{
+    background: #1944b8;
+    grid-area: c6;
+}
+
+#c7{
+    background: #1c1694;
+    grid-area: c7;
+}
+
+footer{
+    background: #941687;
+    grid-area: footer;
+}
+
+@media only screen and (max-width:550px){
+    .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 3vw 50vw 75vw 5vw 75vw 75vw 50vw 5vw 75vw 75vw 25vw ;
+        grid-template-areas: 
+            "nav nav nav nav"
+            "main main main main"
+            "t1 t1 pic1 pic1"
+            "t2 t2 t2 t2"
+            "c1 c1 c2 c2"
+            "c3 c3 c4 c4"
+            "pic2 pic2 pic2 pic2"
+            "t3 t3 t3 t3"
+            "c5 c5 c6 c6"
+            ". c7 c7 ."
+            "footer footer footer footer"
+
+            ;
+    }
+}
+
+@media only screen and (max-width:1024px) and (min-width:551px) {
+    .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 3vw 50vw 40vw 2vw 40vw 40vw 50vw 2vw 40vw 60vw 25vw ; ;
+        grid-template-areas: 
+            "nav nav nav nav"
+            "main main main main"
+            ". t1 pic1 ."
+            "t2 t2 t2 t2"
+            ". c1 c2 ."
+            ". c3 c4 ."
+            "pic2 pic2 pic2 pic2"
+            "t3 t3 t3 t3"
+            ". c5 c6 ."
+            ". c7 c7 ."
+            "footer footer footer footer"
+
+            ;
+    }
+}
