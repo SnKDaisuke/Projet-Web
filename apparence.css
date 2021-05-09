@@ -8,13 +8,13 @@
         "nav nav nav nav nav nav nav nav nav nav nav nav"
         "main main main main main main main main main main main main"
         ". . t1 t1 t1 t1  pic1 pic1 pic1 pic1 . ."
-        "t2 t2 t2 t2 t2 t2 t2 t2 t2 t2 t2 t2"
+        ". . t2 t2 t2 . opt opt opt opt . ."
         "c1 c1 c1 c2 c2 c2 c3 c3 c3 c4 c4 c4"
         ". pic2 pic2 pic2 pic2 pic2 pic2 pic2 pic2 pic2 pic2 ."
         "t3 t3 t3 t3 t3 t3 t3 t3 t3 t3 t3 t3"
         ". c5 c5 c5 . c6 c6 . c7 c7 c7 ."
         "footer footer footer footer footer footer footer footer footer footer footer footer";
-  grid-gap: 1rem;
+  grid-gap: 4rem;
 }
 .container2{
     display: grid;
@@ -33,7 +33,8 @@ nav{
     height: 100vw;
 }
 .logo{
-    width: 6vw;
+    width: 10vw;
+    margin-top: 5%
 }
 #logo{
     grid-area: logo;  
@@ -41,11 +42,26 @@ nav{
 #call-us{
     grid-area: call-us;
 }
+.call-us{
+
+    font-size: 1vw;
+    margin-top: 10%;
+}
 #reseaux{
     grid-area: reseaux;  
 }
+.reseaux{
+    width: 1.5vw;
+    margin-top: 17%;
+}
 #burger{
     grid-area: burger;   
+}
+.burger{
+    width: 2vw;
+    margin-top: 15%;
+    margin-left: 25%;
+    
 }
 main{
     /*background: #762210;*/
@@ -73,7 +89,7 @@ main{
 .caroussel .caroussel-actions{
     display:flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content:space-between;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -97,13 +113,85 @@ main{
 }
 
 #t1{
-    background: #32231f;
+    /*background: #32231f;*/
     grid-area: t1;
+}
+.about-us{
+    color:#129548;
+    font-size: 0.9vw;
+    margin-top: 10%;
+    font-weight: bold
+    
+}
+.leadership{
+    font-size: 2vw;
+    font-weight: bold;
+}
+.presentation{
+    color:grey;
+    font-size: 0.9vw;
+    margin-top: 10%;
+}
+.box26 {
+    margin-top: 20%;
+}
+.border {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10vw;
+    height: 10vw;
+    border: 0.4vw solid #cee002;
+}
+.border-content {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    left: -6.5vw;
+    top: 0vw;
+}
+.number26 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 6vw;
+    font-weight: 600;
+    color: #000;
+}
+.border-list {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 1vw;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    color: #000;
 }
 
 #t2{
-    background: #f0cf2a;
+    /*background: #f0cf2a;*/
     grid-area: t2;
+}
+.title{
+    font-size: 2vw;
+    margin-top: 0.5%;
+    margin-left: 10%;
+}
+
+#opt{
+    /*background: #f0cf2a;*/
+    grid-area: opt;
+}
+.opt{
+    margin-top: 3%;
+}
+.options{
+    font-size: 0.9vw;
+    margin-right: 10%;
+    font-weight: bold
+}
+.options2{
+    font-size: 0.7vw;
+    margin-right: 10%;
+    font-style:italic;
+    color: gray;
 }
 
 #t3{
@@ -117,7 +205,7 @@ main{
 }
 
 .picture1{
-    max-width: 100%;
+    max-width: 125%;
     max-height: 100%;
 }
 
@@ -130,7 +218,22 @@ main{
     background: #129548;
     grid-area: c1;
 }
-
+.c1{
+    max-width: 100%;
+    max-height: 100%;
+}
+.c2{  
+    max-width: 100%;
+    max-height: 100%; 
+}
+.c3{
+    max-width: 200%;
+    max-height: 100%;
+}
+.c4{
+    max-width: 100%;
+    max-height: 100%;
+}
 #c2{
     background: #1affd2;
     grid-area: c2;
@@ -169,12 +272,12 @@ footer{
 @media only screen and (max-width:550px){
     .container{
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 3vw 50vw 75vw 5vw 75vw 75vw 50vw 5vw 75vw 75vw 25vw ;
+        grid-template-rows: 1vw 50vw 75vw 3vw 75vw 75vw 50vw 5vw 75vw 75vw 25vw ;
         grid-template-areas: 
             "nav nav nav nav"
             "main main main main"
             "t1 t1 pic1 pic1"
-            "t2 t2 t2 t2"
+            "t2 t2 opt opt"
             "c1 c1 c2 c2"
             "c3 c3 c4 c4"
             "pic2 pic2 pic2 pic2"
@@ -190,12 +293,12 @@ footer{
 @media only screen and (max-width:1024px) and (min-width:551px) {
     .container{
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 3vw 50vw 40vw 2vw 40vw 40vw 50vw 2vw 40vw 60vw 25vw ; ;
+        grid-template-rows: 1vw 50vw 40vw 3vw 40vw 40vw 50vw 2vw 40vw 60vw 25vw ; ;
         grid-template-areas: 
             "nav nav nav nav"
             "main main main main"
             ". t1 pic1 ."
-            "t2 t2 t2 t2"
+            "t2 t2 opt opt"
             ". c1 c2 ."
             ". c3 c4 ."
             "pic2 pic2 pic2 pic2"
