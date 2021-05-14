@@ -3,7 +3,7 @@
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     /*grid-template-rows: 0.2fr 6fr 4fr 10fr 1fr 2fr 0.5fr 1fr 1.3fr ;*/
-    grid-template-rows: 3vw 50vw 50vw 3vw 40vw 50vw 3vw 40vw 10vw ;
+    grid-template-rows: 3vw 50vw 50vw 3vw 33.3vw 50vw 3vw 20vw 10vw ;
     grid-template-areas: 
         "nav nav nav nav nav nav nav nav nav nav nav nav"
         "main main main main main main main main main main main main"
@@ -11,8 +11,8 @@
         ". . t2 t2 t2 . opt opt opt opt . ."
         "c1 c1 c1 c2 c2 c2 c3 c3 c3 c4 c4 c4"
         ". pic2 pic2 pic2 pic2 pic2 pic2 pic2 pic2 pic2 pic2 ."
-        "t3 t3 t3 t3 t3 t3 t3 t3 t3 t3 t3 t3"
-        ". c5 c5 c5 . c6 c6 . c7 c7 c7 ."
+        ". . t3 t3 t3 t3 t3 t3 t3 t3 . ."
+        ". . . c5 c5 c6 c6 c7 c7 . . ."
         "footer footer footer footer footer footer footer footer footer footer footer footer";
   grid-gap: 4rem;
 }
@@ -210,9 +210,52 @@ main{
 }
 
 #pic2{
-    background: #129518;
+    background: url(./medias/points.png) 0 0 repeat;
     grid-area: pic2;
 }
+
+.opacity{
+    display:block;
+    position:relative;
+    overflow:hidden;
+    }
+
+.opacity img {
+
+    width:100%;
+    height:100%;
+}
+
+.opacity .infos-hover{
+    display:block;
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:0;
+    color:#fff;
+    text-align:center;
+    background:rgba(0,0,0,0.8);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    }
+.opacity .infos-hover h2{
+    text-align:center;
+    margin-top:2vw;
+    margin-left:0.5vw;
+    font-size:2vw;
+}
+.opacity .infos-hover p{
+    text-align:center;
+    margin-top: 10vw;
+}
+.opacity:hover .infos-hover{
+    height:100%;
+}
+
 
 #c1{
     background: #129548;
@@ -227,7 +270,7 @@ main{
     max-height: 100%; 
 }
 .c3{
-    max-width: 200%;
+    max-width: 100%;
     max-height: 100%;
 }
 .c4{
@@ -263,7 +306,47 @@ main{
     background: #1c1694;
     grid-area: c7;
 }
+.opacity2{
+    display:block;
+    position:relative;
+    overflow:hidden;
+    }
 
+.opacity2 img {
+
+    width:100%;
+    height:100%;
+}
+
+.opacity2 .infos-hover2{
+    display:block;
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:0;
+    color:#fff;
+    text-align:center;
+    background:rgba(0,0,0,0.8);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.opacity2 .infos-hover2 h2{
+    text-align:center;
+    margin-top:2vw;
+    margin-left: 0.2vw;
+    font-size:2vw;
+}
+.opacity2 .infos-hover2 p{
+    text-align:center;
+    margin-top: 5vw;
+}
+.opacity2:hover .infos-hover2{
+    height:100%;
+}
 footer{
     background: #941687;
     grid-area: footer;
